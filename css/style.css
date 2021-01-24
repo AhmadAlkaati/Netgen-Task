@@ -1,0 +1,294 @@
+/* Importing Roboto Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #e4e3e3;
+}
+
+/* Header Styles */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 80px;
+  margin: 0 auto;
+  color: #555454;
+  margin-bottom: 1rem;
+}
+
+.page-header h1 {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.page-header i {
+  font-size: 1.5rem;
+}
+
+.page-header .flex-btn {
+  display: none;
+}
+
+/* Main Content Styles */
+.main-content {
+  width: 90%;
+  margin: 0 auto 5rem auto;
+}
+
+.main-content .content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.main-content .content-header .main-info {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-content .content-header .main-info h5:first-child {
+  padding: 0 1rem;
+}
+
+.main-content .content-header .main-info h5:nth-child(2) {
+  padding: 0 1rem 0 0;
+}
+
+.main-content .content-header .secondary-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  position: relative;
+  right: 6.5rem;
+}
+
+.main-content .content-header h5:nth-child(2) {
+  padding-left: 4.5rem;
+}
+
+.main-content .content-header h5 {
+  font-weight: 500;
+}
+
+.main-content .content {
+  background: white;
+}
+
+.main-content .content .book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #cac8c8;
+  line-height: 1.5;
+  padding: 0 20px;
+  text-align: left;
+  position: relative;
+  height: 80px;
+}
+
+.main-content .content .book .title {
+  font-size: 14px;
+  width: 200px;
+}
+
+.main-content .content .book .quote,
+.main-content .content .book .author,
+.main-content .content .book .likes {
+  color: #5f5e5e;
+}
+
+.main-content .content .book .quote {
+  font-size: 12px;
+  width: 400px;
+}
+
+.main-content .content .book .author {
+  font-size: 11px;
+  width: 170px;
+}
+
+.main-content .content .book .cover {
+  width: 80px;
+  height: 100%;
+  text-align: center;
+  background: #c1eafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content .content .book .cover img {
+  width: 50px;
+  height: 90%;
+}
+
+.main-content .content .book .likes {
+  width: 120px;
+}
+
+.main-content .content .book .menu-btn {
+  width: 60px;
+  height: 100%;
+}
+
+.main-content .content .book .menu-btn i {
+  font-size: 1.3rem;
+}
+
+.main-content .content .book .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 100%;
+  z-index: 1;
+  height: 200px;
+  width: 150px;
+  background: #353535;
+}
+
+.main-content .content .book .dropdown-menu li {
+  width: 100%;
+  text-align: right;
+}
+
+.main-content .content .book .dropdown-menu li:last-child {
+  font-size: 9px;
+  color: #817f7f;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.main-content .content .book .dropdown-menu a {
+  font-size: 13px;
+  color: white;
+  padding: 0.3rem 1rem 0.3rem 0;
+  width: 100%;
+  display: inline-block;
+}
+
+.main-content .content .book .dropdown-menu a:hover {
+  background: rgba(104, 103, 103, 0.568);
+  transition: background 0.2s linear;
+}
+
+.main-content .content .book .toggle-dropdown-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.main-content .menu-btn.menu-btn-color {
+  color: white;
+  background: #353535;
+}
+
+.main-content .content-header.hide-header {
+  display: none;
+}
+
+.main-content .content.grid-view {
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  grid-template-rows: repeat(2, 250px);
+  justify-content: center;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  background: transparent;
+}
+
+.main-content .book.book-grid {
+  display: grid;
+  grid-template-columns: 70px 250px;
+  grid-template-rows: 200px 30px;
+  align-items: unset;
+  background: white;
+  padding: 0 !important;
+  height: 230px !important;
+}
+
+.main-content .book.book-grid .title {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+  width: unset;
+  padding: 2.3rem 1.5rem 0 1.5rem;
+}
+
+.main-content .book.book-grid .quote {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+  align-self: center;
+  width: unset;
+  padding: 0 20px;
+}
+
+.main-content .book.book-grid .author {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+  align-self: end;
+  padding: 0 1.5rem 2.3rem 1.5rem;
+}
+
+.main-content .book.book-grid .cover {
+  grid-row: 1/2;
+  align-items: flex-start;
+  width: unset;
+}
+
+.main-content .book.book-grid .cover img {
+  padding-top: 1rem;
+  height: unset;
+}
+
+.main-content .book.book-grid .likes {
+  grid-row: 2/-1;
+  background: #a3d9ee;
+  padding: 0.5rem 0 0 0.2rem;
+  width: unset;
+}
+
+.main-content .book.book-grid .menu-btn {
+  grid-row: 2/-1;
+  grid-column: 2/-1;
+  background: #a3d9ee;
+  text-align: end;
+  padding-right: 0.2rem;
+  width: 100%;
+}
+
+.main-content .book.book-grid .dropdown-menu {
+  right: 0;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

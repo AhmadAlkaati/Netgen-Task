@@ -1,0 +1,141 @@
+/* Importing Roboto Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #e4e3e3;
+}
+
+@media (min-width: 1800px) {
+  .main-content .content-header .secondary-info h5:nth-child(2) {
+    padding-left: 2rem;
+  }
+  .main-content .content-header .secondary-info h5:nth-child(3) {
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .main-content .content-header .secondary-info {
+    width: 35%;
+  }
+  .main-content .content-header .secondary-info h5:first-child {
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .main-content .content.grid-view {
+    grid-template-columns: repeat(3, 320px);
+    grid-template-rows: repeat(3, 250px);
+  }
+}
+
+@media (max-width: 1350px) {
+  .main-content .content-header {
+    display: none;
+  }
+  .main-content .content .book {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 350px;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+  .main-content .content .book .cover {
+    height: 100px;
+  }
+  .main-content .content .book .menu-btn {
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+  }
+  .main-content .content .book .dropdown-menu {
+    right: unset;
+  }
+  .main-content .book.book-grid {
+    text-align: left;
+  }
+  .main-content .book.book-grid .quote {
+    width: unset !important;
+  }
+  .main-content .book.book-grid .cover {
+    height: 100%;
+  }
+  .main-content .book.book-grid .menu-btn {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-content .content.grid-view {
+    grid-template-columns: repeat(2, 320px);
+    grid-template-rows: repeat(4, 250px);
+    column-gap: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-content .content.grid-view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-content {
+    width: 100% !important;
+  }
+  .main-content .content .book .quote {
+    width: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .page-header {
+    width: 80%;
+  }
+  .main-content {
+    width: 80%;
+  }
+  .main-content .book.book-grid {
+    grid-template-columns: 70px 200px;
+  }
+  .main-content .book.book-grid .title {
+    padding: 1.5rem 0.5rem 0 1.2rem;
+  }
+  .main-content .book.book-grid .quote {
+    padding: 1.5rem;
+  }
+  .main-content .book.book-grid .author {
+    padding: 0 0.5rem 1rem 1.2rem;
+  }
+  .main-content .book.book-grid:last-child .title {
+    padding: 0.3rem 1.5rem 0 1.5rem;
+  }
+}
+/*# sourceMappingURL=media.css.map */

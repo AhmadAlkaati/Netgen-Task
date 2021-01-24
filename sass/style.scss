@@ -1,0 +1,227 @@
+@import 'utilities';
+
+/* Header Styles */
+.page-header {
+  @include flex;
+  width: 90%;
+  height: 80px;
+  margin: 0 auto;
+  color: #555454;
+  margin-bottom: 1rem;
+  h1 {
+    font-size: 21px;
+    font-weight: 500;
+  }
+  i {
+    font-size: 1.5rem;
+  }
+
+  .flex-btn {
+    display: none;
+  }
+}
+
+/* Main Content Styles */
+.main-content {
+  width: 90%;
+  margin: 0 auto 5rem auto;
+  .content-header {
+    @include flex;
+    width: 90%;
+    margin-bottom: 1rem;
+    .main-info {
+      width: 30%;
+      @include flex;
+
+      & h5:first-child {
+        padding: 0 1rem;
+      }
+      & h5:nth-child(2) {
+        padding: 0 1rem 0 0;
+      }
+    }
+    .secondary-info {
+      @include flex;
+      width: 30%;
+      position: relative;
+      right: 6.5rem;
+    }
+
+    & h5:nth-child(2) {
+      padding-left: 4.5rem;
+    }
+
+    h5 {
+      font-weight: 500;
+    }
+  }
+
+  .content {
+    background: white;
+
+    & .book {
+      @include flex;
+      border-bottom: 1px solid rgb(202, 200, 200);
+      line-height: 1.5;
+      padding: 0 20px;
+      text-align: left;
+      position: relative;
+      height: 80px;
+
+      .title {
+        font-size: 14px;
+        width: 200px;
+      }
+      .quote,
+      .author,
+      .likes {
+        color: rgb(95, 94, 94);
+      }
+      .quote {
+        font-size: 12px;
+        width: 400px;
+      }
+      .author {
+        font-size: 11px;
+        width: 170px;
+      }
+
+      .cover {
+        width: 80px;
+        height: 100%;
+        text-align: center;
+        background: rgb(193, 234, 250);
+        @include flex;
+        justify-content: center;
+        img {
+          width: 50px;
+          height: 90%;
+        }
+      }
+      .likes {
+        width: 120px;
+      }
+
+      .menu-btn {
+        width: 60px;
+        height: 100%;
+
+        i {
+          font-size: 1.3rem;
+        }
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 100%;
+        z-index: 1;
+        height: 200px;
+        width: 150px;
+        background: rgb(53, 53, 53);
+
+        li {
+          width: 100%;
+          text-align: right;
+        }
+
+        & li:last-child {
+          font-size: 9px;
+          color: rgb(129, 127, 127);
+          margin-bottom: 1rem;
+          padding-right: 1rem;
+        }
+        a {
+          font-size: 13px;
+          color: white;
+          padding: 0.3rem 1rem 0.3rem 0;
+          width: 100%;
+          display: inline-block;
+        }
+        a:hover {
+          background: rgba(104, 103, 103, 0.568);
+          transition: background 0.2s linear;
+        }
+      }
+      .toggle-dropdown-menu {
+        @include flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+      }
+    }
+  }
+  .menu-btn.menu-btn-color {
+    color: white;
+    background: rgb(53, 53, 53);
+  }
+  .content-header.hide-header {
+    display: none;
+  }
+  .content.grid-view {
+    display: grid;
+    grid-template-columns: repeat(4, 320px);
+    grid-template-rows: repeat(2, 250px);
+    justify-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    background: transparent;
+  }
+  .book.book-grid {
+    display: grid;
+    grid-template-columns: 70px 250px;
+    grid-template-rows: 200px 30px;
+    align-items: unset;
+    background: white;
+    padding: 0 !important;
+    height: 230px !important;
+
+    .title {
+      grid-column: 2/-1;
+      grid-row: 1/2;
+      width: unset;
+      padding: 2.3rem 1.5rem 0 1.5rem;
+    }
+    .quote {
+      grid-column: 2/-1;
+      grid-row: 1/2;
+      align-self: center;
+      width: unset;
+      padding: 0 20px;
+    }
+    .author {
+      grid-column: 2/-1;
+      grid-row: 1/2;
+      align-self: end;
+      padding: 0 1.5rem 2.3rem 1.5rem;
+    }
+    .cover {
+      grid-row: 1/2;
+      align-items: flex-start;
+      width: unset;
+
+      img {
+        padding-top: 1rem;
+        height: unset;
+      }
+    }
+    .likes {
+      grid-row: 2/-1;
+      background: rgb(163, 217, 238);
+      padding: 0.5rem 0 0 0.2rem;
+      width: unset;
+    }
+    .menu-btn {
+      grid-row: 2/-1;
+      grid-column: 2/-1;
+      background: rgb(163, 217, 238);
+      text-align: end;
+      padding-right: 0.2rem;
+      width: 100%;
+    }
+    .dropdown-menu {
+      right: 0;
+      width: 100%;
+    }
+  }
+}
